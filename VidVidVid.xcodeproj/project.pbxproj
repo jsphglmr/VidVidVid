@@ -16,8 +16,9 @@
 		C70D1F1229175C2500B50572 /* VidVidVidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D1F1129175C2500B50572 /* VidVidVidTests.swift */; };
 		C70D1F1C29175C2500B50572 /* VidVidVidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D1F1B29175C2500B50572 /* VidVidVidUITests.swift */; };
 		C70D1F1E29175C2500B50572 /* VidVidVidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D1F1D29175C2500B50572 /* VidVidVidUITestsLaunchTests.swift */; };
-		C70D1F2C2918504700B50572 /* MovieListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D1F2B2918504700B50572 /* MovieListCollectionViewCell.swift */; };
 		C70D1F2F2918512800B50572 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D1F2E2918512800B50572 /* MainTabBarViewController.swift */; };
+		C70D1F3529186FCB00B50572 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D1F3429186FCB00B50572 /* CollectionViewTableViewCell.swift */; };
+		C70D1F382918754900B50572 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D1F372918754900B50572 /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,9 @@
 		C70D1F1729175C2500B50572 /* VidVidVidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VidVidVidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70D1F1B29175C2500B50572 /* VidVidVidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidVidVidUITests.swift; sourceTree = "<group>"; };
 		C70D1F1D29175C2500B50572 /* VidVidVidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidVidVidUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C70D1F2B2918504700B50572 /* MovieListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C70D1F2E2918512800B50572 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		C70D1F3429186FCB00B50572 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		C70D1F372918754900B50572 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +105,9 @@
 		C70D1EF629175C2300B50572 /* VidVidVid */ = {
 			isa = PBXGroup;
 			children = (
+				C70D1F36291870E800B50572 /* Views */,
+				C70D1F3329186FA300B50572 /* Controllers */,
 				C70D1F302918513C00B50572 /* Delegates */,
-				C70D1F2D2918511D00B50572 /* Tab Bar */,
-				C70D1F2A29184FB600B50572 /* Movie List */,
 				C70D1F0329175C2500B50572 /* Assets.xcassets */,
 				C70D1F0529175C2500B50572 /* LaunchScreen.storyboard */,
 				C70D1F0829175C2500B50572 /* Info.plist */,
@@ -131,23 +133,6 @@
 			path = VidVidVidUITests;
 			sourceTree = "<group>";
 		};
-		C70D1F2A29184FB600B50572 /* Movie List */ = {
-			isa = PBXGroup;
-			children = (
-				C70D1EFB29175C2300B50572 /* MovieListViewController.swift */,
-				C70D1F2B2918504700B50572 /* MovieListCollectionViewCell.swift */,
-			);
-			path = "Movie List";
-			sourceTree = "<group>";
-		};
-		C70D1F2D2918511D00B50572 /* Tab Bar */ = {
-			isa = PBXGroup;
-			children = (
-				C70D1F2E2918512800B50572 /* MainTabBarViewController.swift */,
-			);
-			path = "Tab Bar";
-			sourceTree = "<group>";
-		};
 		C70D1F302918513C00B50572 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +140,24 @@
 				C70D1EF929175C2300B50572 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C70D1F3329186FA300B50572 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C70D1F2E2918512800B50572 /* MainTabBarViewController.swift */,
+				C70D1EFB29175C2300B50572 /* MovieListViewController.swift */,
+				C70D1F372918754900B50572 /* FavoritesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C70D1F36291870E800B50572 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C70D1F3429186FCB00B50572 /* CollectionViewTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +292,8 @@
 			files = (
 				C70D1EFC29175C2300B50572 /* MovieListViewController.swift in Sources */,
 				C70D1EF829175C2300B50572 /* AppDelegate.swift in Sources */,
-				C70D1F2C2918504700B50572 /* MovieListCollectionViewCell.swift in Sources */,
+				C70D1F382918754900B50572 /* FavoritesViewController.swift in Sources */,
+				C70D1F3529186FCB00B50572 /* CollectionViewTableViewCell.swift in Sources */,
 				C70D1F2F2918512800B50572 /* MainTabBarViewController.swift in Sources */,
 				C70D1EFA29175C2300B50572 /* SceneDelegate.swift in Sources */,
 				C70D1F0229175C2300B50572 /* VidVidVid.xcdatamodeld in Sources */,

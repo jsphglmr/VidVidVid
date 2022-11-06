@@ -15,17 +15,16 @@ class MainTabBarViewController: UITabBarController {
         view.backgroundColor = .systemRed
         
         let vc1 = MovieListViewController()
-        let vc2 = MovieListViewController()
-        let vc3 = MovieListViewController()
-        let vc4 = MovieListViewController()
+        let vc2 = FavoritesViewController()
         
         vc1.tabBarItem.image = UIImage(systemName: "film.circle.fill")
-        vc2.tabBarItem.image = UIImage(systemName: "film.circle.fill")
-        vc3.tabBarItem.image = UIImage(systemName: "film.circle.fill")
-        vc4.tabBarItem.image = UIImage(systemName: "film.circle.fill")
+        vc1.title = "Browse"
+        
+        vc2.tabBarItem.image = UIImage(systemName: "heart.circle.fill")
+        vc2.title = "Favorites"
         
         tabBar.tintColor = .label
         
-        setViewControllers([vc1,vc2,vc3,vc4], animated: true)
+        setViewControllers([vc1,vc2], animated: true)
     }
 }
