@@ -1,2 +1,2 @@
 # VidVidVid
-iOS Video StreamingApp
+iOS Video Streaming App
