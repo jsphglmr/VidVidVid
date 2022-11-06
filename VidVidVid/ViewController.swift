@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemRed
     }
 }
 
