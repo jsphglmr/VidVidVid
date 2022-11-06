@@ -10,7 +10,7 @@ import UIKit
 class MovieListViewController: UIViewController {
     
     private let homeTableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         return tableView
     }()
@@ -32,6 +32,8 @@ class MovieListViewController: UIViewController {
 extension MovieListViewController {
     func configureViews() {
         view.addSubview(homeTableView)
+        
+        homeTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 350))
     }
     
     func style() {
@@ -44,8 +46,13 @@ extension MovieListViewController {
 }
 
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
