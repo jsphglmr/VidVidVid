@@ -39,8 +39,8 @@ class MovieListViewController: UIViewController {
 extension MovieListViewController {
     func configureViews() {
         view.addSubview(homeTableView)
-        
-        homeTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 350))
+        let headerView = BrowseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 300))
+        homeTableView.tableHeaderView = headerView
     }
     
     func style() {
@@ -73,7 +73,7 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 25
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
