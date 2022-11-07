@@ -9,8 +9,15 @@ import UIKit
 
 class MovieListViewController: UIViewController {
     
+    let sections = [
+        "Trending",
+        "New",
+        "Classics"
+    ]
+    
     private let homeTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.separatorColor = .clear
         tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         return tableView
     }()
@@ -46,7 +53,6 @@ extension MovieListViewController {
 }
 
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
@@ -68,6 +74,23 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = sections[section]
+        label.font = UIFont.preferredFont(forTextStyle: .title3)
+
+        let headerView = UIView()
+        headerView.addSubview(label)
+
+        label.leadingAnchor.constraint(equalTo: headerView.leadingAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: headerView.centerYAnchor, constant: 15).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        label.widthAnchor.constraint(equalToConstant: view.bounds.width).isActive = true
+
+        return headerView
     }
     
 }
