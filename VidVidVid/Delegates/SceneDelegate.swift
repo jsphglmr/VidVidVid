@@ -17,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = MainTabBarViewController()
         window.makeKeyAndVisible()
+        window.overrideUserInterfaceStyle = .dark // disable darkmode across app
         self.window = window
     }
 
