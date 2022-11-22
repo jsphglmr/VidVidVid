@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieListViewController: UIViewController {
+class BrowseViewController: UIViewController {
     
     let sections = [
         "Trending",
@@ -36,7 +36,7 @@ class MovieListViewController: UIViewController {
     }
 }
 
-extension MovieListViewController {
+extension BrowseViewController {
     func configureViews() {
         view.addSubview(homeTableView)
         let headerView = BrowseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 300))
@@ -52,7 +52,7 @@ extension MovieListViewController {
     }
 }
 
-extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
+extension BrowseViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }

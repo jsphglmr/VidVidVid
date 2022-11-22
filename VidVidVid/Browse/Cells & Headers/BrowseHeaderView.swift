@@ -11,18 +11,18 @@ import AVKit
 
 class BrowseHeaderView: UIView {
     
-//    private let snatchImageView: UIImageView = {
-//        let image = UIImageView()
-//        image.contentMode = .scaleAspectFill
-//        image.clipsToBounds = true
-//        image.image = UIImage(named: "snatch")
-//        return image
-//    }()
-//
+    //    private let snatchImageView: UIImageView = {
+    //        let image = UIImageView()
+    //        image.contentMode = .scaleAspectFill
+    //        image.clipsToBounds = true
+    //        image.image = UIImage(named: "snatch")
+    //        return image
+    //    }()
+    //
     //init
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        addSubview(snatchImageView)
+        //        addSubview(snatchImageView)
         playVideo()
         addGradient()
     }
@@ -33,14 +33,13 @@ class BrowseHeaderView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-//        snatchImageView.frame = bounds
+        //        snatchImageView.frame = bounds
     }
     
     func addGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
             UIColor.black.cgColor,
-//            UIColor.clear.cgColor,
             UIColor.clear.cgColor,
             UIColor.black.cgColor
         ]
@@ -61,15 +60,15 @@ class BrowseHeaderView: UIView {
         playerLayer.videoGravity = .resizeAspectFill
         playerLayer.needsDisplayOnBoundsChange = true
         playerLayer.frame = bounds
-
+        
         layer.masksToBounds = true
         layer.addSublayer(playerLayer)
         
         player.play()
         
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { (_) in
-        player.seek(to: CMTime.zero)
-        player.play()
-    }
+            player.seek(to: CMTime.zero)
+            player.play()
+        }
     }
 }
