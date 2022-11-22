@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BrowseViewController.swift
 //  VidVidVid
 //
 //  Created by Joseph Gilmore on 11/5/22.

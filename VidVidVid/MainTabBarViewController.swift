@@ -14,7 +14,7 @@ class MainTabBarViewController: UITabBarController {
         
         view.backgroundColor = .systemRed
         
-        let vc1 = MovieListViewController()
+        let vc1 = BrowseViewController()
         let vc2 = FavoritesViewController()
         
         vc1.tabBarItem.image = UIImage(systemName: "film.circle.fill")
